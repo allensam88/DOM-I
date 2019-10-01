@@ -45,8 +45,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 //nav bar
 const links = document.querySelectorAll('a');
-
 links.forEach((currentValue, i) => (currentValue.textContent = Object.values(siteContent.nav)[i]));
+
+links.forEach((item) => (item.style.color = 'green'));
 
 // //Call-To-Action Section
 const ctaHeader = document.querySelector('h1')
@@ -80,3 +81,16 @@ p[8].textContent = (siteContent['footer']['copyright']);
 
 let midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const newLink1 = document.createElement('a');
+newLink1.textContent = 'Sign-Up';
+newLink1.style.color = 'green';
+const secondaryContent = document.querySelector('nav');
+secondaryContent.appendChild(newLink1);
+
+
+const newLink2 = document.createElement('a');
+const tertiaryContent = document.querySelector('nav');
+newLink2.style.color = 'green';
+newLink2.textContent = 'Demo';
+tertiaryContent.prepend(newLink2);
